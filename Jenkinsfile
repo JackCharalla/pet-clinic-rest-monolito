@@ -7,7 +7,7 @@ pipeline {
     environment {
         MAVEN_OPTS = "-Dmaven.repo.local=${WORKSPACE}/.m2"
         SONAR_USER_HOME = "${WORKSPACE}/.sonar"
-        ARTIFACTORY_CREDENTIALS = credentials('artifactory-credentials')
+        //ARTIFACTORY_CREDENTIALS = credentials('artifactory-credentials')
     }
     stages {
         stage('Build') {
