@@ -53,8 +53,8 @@ pipeline {
                 }                
 
                 script{
-                    def releaseRepo = 'spring-petclinic-rest-release'
-                    def snapshotRepo = 'spring-petclinic-rest-snapshot'
+                    def releaseRepo = 'pet-clinic-rest-monolito-release'
+                    def snapshotRepo = 'pet-clinic-rest-monolito-snapshot'
                     
                     def server = Artifactory.server 'artifactory'
                     
