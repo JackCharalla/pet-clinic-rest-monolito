@@ -15,22 +15,13 @@ pipeline {
                 sh 'mvn clean compile -B -ntp'
             }
         }
-        stage('Test Junit') {
+        stage('Tests (Junit + Jacoco)') {
             steps {
-                sh 'mvn test -B -ntp'
+                sh 'mvn test jacoco:report -B -ntp'
             }
-            post { 
+            post {
                 success {
                     junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-        stage('Test Jacoco') {
-            steps {
-                sh 'mvn jacoco:report -B -ntp'
-            }
-            post { 
-                success {
                     recordCoverage(tools: [[parser: 'JACOCO']])
                 }
             }
