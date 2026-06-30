@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework.samples</groupId>
-    <artifactId>spring-petclinic-rest</artifactId>
-    <version>4.0.5</version>
+    <artifactId>pet-clinic-rest-monolito</artifactId>
+    <version>4.0.6</version>
 
     <description>REST version of the Spring Petclinic sample application</description>
     <url>https://spring-petclinic.github.io/</url>
