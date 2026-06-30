@@ -8,14 +8,11 @@ El proyecto sirve de Apis para la gestión de clientes, veterinarios y mascotas.
 ## Ejercicio 1: Aplicación Monolítica
 Crear un pipeline(Jenkinsfile) con los siguientes stages: 
 
-Build.
-
-Testing(Junit + Jacoco).
-Sonar.
-
-Generar artefacto y almacenar en Artifactory.
+- **Build**
+- **Testing(Junit + Jacoco)**
+- **Sonar**
+- **Generar artefacto y almacenar en Artifactory**
 
 ## Curso: Arquitecto Devops & Secops
-Docente: Dany Cenas.
-
-Alumno: Jack Charalla.
+- **Docente: Dany Cenas**
+- **Alumno: Jack Charalla**
