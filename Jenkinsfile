@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean compile -B -ntp'
+                sh 'mvn clean package -DskipTests -B -ntp'
             }
         }
         stage('Tests (Junit + Jacoco)') {
@@ -24,11 +24,6 @@ pipeline {
                     junit 'target/surefire-reports/*.xml'
                     recordCoverage(tools: [[parser: 'JACOCO']])
                 }
-            }
-        }
-        stage('Package') {
-            steps {
-                sh 'mvn package -DskipTests -B -ntp'
             }
         }
         stage('SonarQube') {
