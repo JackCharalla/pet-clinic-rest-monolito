@@ -42,7 +42,6 @@ pipeline {
         stage('SonarQube') {
             steps {
                 withSonarQubeEnv('sonarqube'){
-                    sh 'env | sort'
                     script {
                         if (env.CHANGE_ID) {
                             sh """
@@ -63,7 +62,6 @@ pipeline {
         stage('Artifactory') {
             steps {
                   withCredentials([file(credentialsId: 'artifactory-settings', variable: 'M2_SETTINGS')]) {
-                    sh 'env | sort'
                     sh 'mvn clean package -B -DskipTests -s ${M2_SETTINGS}'
                 }                
 
